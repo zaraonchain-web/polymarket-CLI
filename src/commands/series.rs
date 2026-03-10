@@ -59,7 +59,7 @@ pub async fn execute(client: &gamma::Client, args: SeriesArgs, output: OutputFor
                 .limit(limit)
                 .maybe_offset(offset)
                 .maybe_order(order)
-                .maybe_ascending(ascending.then_some(true))
+                .ascending(ascending)
                 .maybe_closed(closed)
                 .build();
 

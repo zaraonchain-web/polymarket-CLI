@@ -66,7 +66,7 @@ pub async fn execute(client: &gamma::Client, args: SportsArgs, output: OutputFor
                 .limit(limit)
                 .maybe_offset(offset)
                 .maybe_order(order)
-                .maybe_ascending(ascending.then_some(true))
+                .ascending(ascending)
                 .league(league.into_iter().collect())
                 .build();
 
